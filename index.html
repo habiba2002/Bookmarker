@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/all.min.js"></script>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header class="container">
+        <h1 class="text-center display-5 pt-4 pb-4 ">Bookmarker</h1>
+    </header>
+    <h6 class="text-center"><i class="fa-solid fa-gear pe-2"></i>Bookmark your favorite sites<i
+            class="fa-solid fa-gear ps-2"></i></h6>
+    <section class="container user-input pb-4">
+        <form>
+            <i class="fa-solid fa-book ps-3"></i><label for="webSiteName" class="ps-3">Site Name</label>
+            <input oninput="sitNameValidation()" id="webSiteName" type="text" class="form-control my-2 bg-dark-subtle " required minlength="3">
+            <i class="fa-solid fa-chain ps-3"></i><label for="webSiteURL" class="ps-3">Site Url</label>
+            <input id="webSiteURL" oninput="sitUrlValidation()" type="text" class="form-control my-2 bg-dark-subtle" required>
+              
+            <input id="search" onkeyup="searchSite()"  type="text" class="form-control my-2 bg-dark-subtle w-50 mx-auto mt-4" required placeholder="Search">
+        </form>
+        <button id="addBtn" onclick='addSite()' type="button" class="btn btn-light m-2 px-3 ">Submit</button>
+        <button onclick="editValues()" type="button" class="btn btn-light m-2 px-3 d-none" id="editBtn">Apply
+            Edit</button>
+        <button onclick='clearForm()' type="button" class="btn btn-light m-2 px-3">Clear form</button>
+    </section>
+
+    <div class="table-responsive">
+        <table class="table text-center table-striped table-dark table-bordered my-2 w-75 mx-auto">
+            <thead>
+                <tr>
+                    <td>Index</td>
+                    <td>Site Name</td>
+                    <td>Visit</td>
+                    <td>Delete</td>
+                    <td>Edit</td>
+                </tr>
+            </thead>
+            <tbody id="tableData">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="msg-container position-fixed top-0 bottom-0 start-0 end-0 dark-bg d-flex justify-content-center align-items-center d-none"
+        id="msg-container">
+        <div class="message bg-dark rounded-1 position-relative">
+            <i class="fa-solid fa-circle ms-2" style="color: green;"></i>
+            <i class="fa-solid fa-circle" style="color: red;"></i>
+            <i class="fa-solid fa-circle " style="color: yellow;"></i>
+            <i onclick="closeMsg()" id="closeBtn" class="fa-solid fa-close position-absolute"
+                style="color: white; right: 2%; top:5%;"></i>
+            <h5 class="text-white my-5 mx-2">Site Name or Url is not valid , Please follow the rules below:</h5>
+            <h6 class="mt-4 mx-3 "><i class="fa-solid fa-arrow-circle-right me-2"></i>Site name must contain at least 3
+                characters</h6>
+            <h6 class="mt-4 mx-3 "><i class="fa-solid fa-arrow-circle-right me-2"></i>Site Url must ba a valid one</h6>
+        </div>
+    </div>
+    <script src="JS/index.js"></script>
+</body>
+
+</html>
