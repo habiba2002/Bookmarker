@@ -18,10 +18,7 @@ h1 {
     font-family: Pattaya;
 }
 
-h1,
-.user-input {
-    border-bottom: dashed;
-}
+
 
 .btn-light {
     --bs-btn-color: #f8f9fa;
