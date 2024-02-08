@@ -73,6 +73,10 @@ function show() {
 function clearForm() {
     nameInput.value = ' '
     urlInput.value = ' '
+    nameInput.classList.remove("is-valid")
+    nameInput.classList.remove("is-invalid")
+    urlInput.classList.remove("is-valid")
+    urlInput.classList.remove("is-invalid")
 }
 function deleteSite(index) {
     siteList.splice(index, 1)

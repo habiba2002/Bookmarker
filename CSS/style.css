@@ -1,24 +1,18 @@
 @font-face {
-    font-family: Pattaya;
-    src: url(../Fonts/Pattaya/Pattaya-Regular.ttf);
-}
-
-@font-face {
     font-family: Zen_Antique;
     src: url(../Fonts/Zen_Antique/ZenAntique-Regular.ttf);
 }
 
 body {
-    background: linear-gradient(to right, #222, #2222227f);
+    background-color: #2c3034;
     font-family: Zen_Antique;
     color: #d6a4a4d7;
 }
 
 h1 {
-    font-family: Pattaya;
+
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
-
-
 
 .btn-light {
     --bs-btn-color: #f8f9fa;
@@ -46,8 +40,8 @@ h1 {
 }
 
 .message {
-     width: 50%;
-     height: 50%;
+    width: 50%;
+    height: 50%;
 }
 
 #closeBtn {
