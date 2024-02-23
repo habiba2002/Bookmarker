@@ -14,38 +14,40 @@
 
 <body>
     <header class="container">
-        <h1 class="text-center display-5 pt-4 pb-4  fw-bold">Bookmarker</h1>
+        <h1 class="text-center p-4 h1 fw-bold">Bookmarker</h1>
     </header>
-    <section class="container user-input pb-4">
+
+    <section class="container user-input">
         <form>
+            <div class="bg-body-tertiary shadow-sm p-3 rounded-2 d-flex align-items-center my-3">
+                <label for="webSiteName" class="fw-bold mx-2"> Enter site name : </label>
+                <input id="webSiteName" oninput="sitNameValidation()" type="text"
+                    class="form-control shadow-sm w-75 mx-auto" required>
+            </div>
+            <div class="bg-body-tertiary shadow-sm p-3 rounded-2 d-flex align-items-center">
+                <label for="webSiteURL" class="fw-bold mx-2"> Enter site url : </label>
+                <input id="webSiteURL" oninput="sitUrlValidation()" type="text"
+                    class="form-control shadow-sm  w-75 mx-auto" required>
+            </div>
 
-            <label for="webSiteName" class="ps-3">Site Name</label>
-            <input oninput="sitNameValidation()" id="webSiteName" type="text"
-                class="form-control m-3 bg-transparent text-white" required>
-
-            <label for="webSiteURL" class="ps-3">Site Url</label>
-            <input id="webSiteURL" oninput="sitUrlValidation()" type="text"
-                class="form-control m-3 bg-transparent text-white" required>
-
-
-            <input id="search" onkeyup="searchSite()" type="text"
-                class="form-control my-2 bg-dark-subtle w-50 mx-auto mt-4" required placeholder="Search">
+            <input id="search" onkeyup="searchSite()" type="text" class="form-control m-3 w-50 mx-auto  ps-3" required
+                placeholder="Search">
         </form>
-        <button id="addBtn" onclick='addSite()' type="button" class="btn btn-light m-2 px-3 ">Submit</button>
-        <button onclick="editValues()" type="button" class="btn btn-light m-2 px-3 d-none" id="editBtn">Apply
+        <button id="addBtn" onclick='addSite()' type="button " class="btn btn-outline-success">Submit</button>
+        <button onclick="editValues()" type="button" class="btn  m-2 px-3 btn-outline-success d-none" id="editBtn">Apply
             Edit</button>
-        <button onclick='clearForm()' type="button" class="btn btn-light m-2 px-3">Clear form</button>
+        <button onclick='clearForm()' type="button" class="btn btn-outline-dark m-2 px-3">Clear form</button>
     </section>
 
-    <div class="table-responsive">
-        <table class="table text-center table-striped table-dark table-bordered my-2 w-75 mx-auto">
+    <div class="table-responsive container">
+        <table class="table text-center table-striped table-bordered my-2  mx-auto">
             <thead>
                 <tr>
-                    <td>Index</td>
-                    <td>Site Name</td>
-                    <td>Visit</td>
-                    <td>Delete</td>
-                    <td>Edit</td>
+                    <td class="fw-bold">Index</td>
+                    <td class="fw-bold">Site Name</td>
+                    <td class="fw-bold">Visit</td>
+                    <td class="fw-bold">Delete</td>
+                    <td class="fw-bold">Edit</td>
                 </tr>
             </thead>
             <tbody id="tableData">
@@ -54,10 +56,9 @@
         </table>
     </div>
 
-
     <div class="msg-container position-fixed top-0 bottom-0 start-0 end-0 dark-bg d-flex justify-content-center align-items-center d-none"
         id="msg-container">
-        <div class="message bg-dark rounded-1 position-relative" >
+        <div class="message bg-dark rounded-1 position-relative">
             <i class="fa-solid fa-circle ms-2" style="color: green;"></i>
             <i class="fa-solid fa-circle" style="color: red;"></i>
             <i class="fa-solid fa-circle " style="color: yellow;"></i>

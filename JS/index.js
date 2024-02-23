@@ -14,7 +14,6 @@ if (siteList == null) {
 else {
     show()
 }
-
 function sitNameValidation() {
     var regex = /^.{3,}/
     if (regex.test(nameInput.value) === true) {
@@ -27,7 +26,6 @@ function sitNameValidation() {
         return false
     }
 }
-
 function sitUrlValidation() {
     var regex = /^(https:\/\/)?[A-Za-z-0-9]{0,}(\.[A-Za-z-0-9]{2,})/
     if (regex.test(urlInput.value) === true) {
@@ -62,9 +60,9 @@ function show() {
             `<tr>
                 <td> ${i + 1}</td>
                 <td> ${siteList[i].name}</td>
-                <td><a href='${siteList[i].url}'><button type="button" class="btn btn-dark">Visit<i class='fa-solid fa-eye ms-2'></i></button></a></td>
-                <td><button type="button" onclick='deleteSite(${i})' class="btn btn-dark">Delete<i class='fa-solid fa-trash ms-2'></i></button></td>
-                <td><button type="button" onclick='editSite(${i})' class="btn btn-dark">Edit<i class='fa-solid fa-edit ms-2'></i></button></td>        
+                <td><a href='${siteList[i].url}'><button type="button" class="btn btn-outline-secondary w-100">Visit</button></a></td>
+                <td><button type="button" onclick='deleteSite(${i})' class="btn btn-outline-danger w-100 mx-auto">Delete</button></td>
+                <td><button type="button" onclick='editSite(${i})' class="btn btn-outline-warning w-100">Edit</button></td>        
             </tr>`
     }
 
@@ -90,7 +88,6 @@ function editSite(index) {
     editBtn.classList.remove('d-none')
     index = index
 }
-
 function editValues() {
     siteList[index].name = nameInput.value
     siteList[index].url = urlInput.value
@@ -100,11 +97,9 @@ function editValues() {
     addBtn.classList.remove('d-none')
     editBtn.classList.add('d-none')
 }
-
 function closeMsg() {
     msgContainer.classList.add('d-none')
 }
-
 function searchSite() {
     var row = ' '
     var searchKey = searchInput.value.toLowerCase()
@@ -114,13 +109,11 @@ function searchSite() {
                 `<tr>
                 <td> ${i + 1}</td>
                 <td> ${siteList[i].name}</td>
-                <td><a href='${siteList[i].url}'><button type="button" class="btn btn-dark">Visit<i class='fa-solid fa-eye ms-2'></i></button></a></td>
-                <td><button type="button" onclick='deleteSite(${i})' class="btn btn-dark">Delete<i class='fa-solid fa-trash ms-2'></i></button></td>
-                <td><button type="button" onclick='editSite(${i})' class="btn btn-dark">Edit<i class='fa-solid fa-edit ms-2'></i></button></td>        
+                <td><a href='${siteList[i].url}'><button type="button" class="btn btn-outline-secondary w-100">Visit</button></a></td>
+                <td><button type="button" onclick='deleteSite(${i})' class="btn btn-outline-danger w-100 ">Delete</button></td>
+                <td><button type="button" onclick='editSite(${i})' class="btn btn-outline-warning w-100">Edit</button></td>        
             </tr>`
         }
     }
     document.getElementById('tableData').innerHTML = row
-
 }
-

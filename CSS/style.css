@@ -1,49 +1,11 @@
-@font-face {
-    font-family: Zen_Antique;
-    src: url(../Fonts/Zen_Antique/ZenAntique-Regular.ttf);
-}
-
 body {
-    background-color: #2c3034;
-    font-family: Zen_Antique;
-    color: #d6a4a4d7;
-}
-
-h1 {
-
-    font-family: Georgia, 'Times New Roman', Times, serif
-}
-
-.btn-light {
-    --bs-btn-color: #f8f9fa;
-    --bs-btn-bg: #dae2f821;
-    --bs-btn-border-color: #f8f9fa;
-    --bs-btn-hover-color: #d6a4a4d7;
-    --bs-btn-hover-bg: #dae2f821;
-    --bs-btn-hover-border-color: #c6c7c8;
-}
-
-.table-dark {
-    --bs-table-color: #d6a4a4d7;
-    --bs-table-bg: #212529;
-    --bs-table-border-color: #4d5154;
-    --bs-table-striped-bg: #2c3034;
-    --bs-table-striped-color: #d6a4a4d7;
-    --bs-table-active-bg: #373b3e;
-    --bs-table-active-color: #d6a4a4d7;
-    color: var(--bs-table-color);
-    border-color: var(--bs-table-border-color);
-}
-
-.dark-bg {
-    background-color: rgba(0, 0, 0, 0.4);
+    font-family: Georgia, 'Times New Roman', Times, serif;  
 }
 
 .message {
     width: 50%;
     height: 50%;
 }
-
 #closeBtn {
     cursor: pointer;
 }
